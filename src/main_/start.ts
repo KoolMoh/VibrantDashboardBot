@@ -1,8 +1,8 @@
-import { Client, ClientEvents, Collection, IntentsBitField } from "discord.js";
+import { IntentsBitField } from "discord.js";
 import customClient from "../constants_/custom_client";
 import { token } from "../constants_/priv_data.json";
 import { commandHandlers } from "../constants_/command_handlers"
-import { eventHandler, eventHandlers } from "../constants_/event_handlers";
+import { eventHandlers } from "../constants_/event_handlers";
 
 const bot = new customClient({
     intents: IntentsBitField.Flags.Guilds

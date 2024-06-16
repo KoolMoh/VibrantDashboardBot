@@ -1,6 +1,6 @@
-import { ApplicationCommand, ClientEvents, InteractionType } from "discord.js";
+import { ClientEvents, InteractionType } from "discord.js";
 import customClient from "./custom_client";
-import { getPermissionLvl, permissionLvl } from "./command_handlers";
+import { getPermissionLvl } from "./command_handlers";
 
 const readyEvent: eventHandler<"ready"> = {
     name: "ready",
@@ -20,7 +20,7 @@ const interactionEvent: eventHandler<"interactionCreate"> = {
                 if(getPermissionLvl(interaction.user) == command?.permissionLvl){
                     interaction.reply(command.execute(client, interaction));
                 } else {
-                    interaction.reply("no")
+                    interaction.reply(`Unable to execute the command. The command requires permission level ${command?.permissionLvl}.`)
                 }
             } catch(err){
                 console.log("something happened. " + err)

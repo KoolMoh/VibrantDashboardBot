@@ -1,6 +1,6 @@
 import { Interaction, User } from "discord.js";
 import customClient from "./custom_client";
-import { client_info } from "../constants_/locked_data.json";
+import { client_info } from "../constants_/priv_data.json";
 
 export enum permissionLvl {
     Owner,
@@ -9,7 +9,7 @@ export enum permissionLvl {
 
 export const getPermissionLvl = (user: User) => {
     if(user.id == client_info.owner_id_) return permissionLvl.Owner;
-    else return permissionLvl.User
+    else return permissionLvl.User;
 }
 
 export const commandHandlers: commandHandler[] = [{
