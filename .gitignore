@@ -69,4 +69,4 @@ ehthumbs.db
 .stylelintcache
 
 # Discord.js specific
-config.json
+priv_data.json
