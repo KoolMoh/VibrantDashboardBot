@@ -1,5 +1,23 @@
 {
+  "name": "vibrant-dashboard-bot",
+  "version": "1.0.0",
+  "description": "A bot for Vibrant Dashboard",
+  "main": "dist/main_/start.js",
+  "scripts": {
+    "start": "node dist/main_/start.js"
+  },
+  "keywords": [
+    "bot",
+    "discordjs"
+  ],
+  "author": "KoolMoh, Sammar, Ronin",
+  "license": "MIT",
   "dependencies": {
-    "discord.js": "^14.14.1"
+    "discord.js": "^14.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.29",
+    "typescript": "^5.1.5"
   }
 }
+
